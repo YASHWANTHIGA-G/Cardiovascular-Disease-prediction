@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardioCare | Cardiovascular Disease Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            ❤️ CardioCare
+        </div>
+
+        <nav>
+
+            <a href="#"></a>
+            
+
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="overlay">
+
+            <div class="hero-content">
+
+                <h1>
+                    Cardiovascular Disease Prediction
+                </h1>
+
+                <p>
+
+                    Predict heart disease risk using Machine Learning.
+                    Enter patient information below to receive an instant prediction.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Form Section -->
+
+    <section class="prediction-section">
+
+        <div class="form-card">
+
+            <h2>
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                Patient Details
+
+            </h2>
+
+            <form action="/predict" method="POST">
+
+                <div class="grid">
+
+                    <div class="input-box">
+                        <label>Age (Years)</label>
+                        <input type="number" name="age" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Gender</label>
+                        <select name="gender">
+                            <option value="1">Female</option>
+                            <option value="2">Male</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Height (cm)</label>
+                        <input type="number" name="height" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Weight (kg)</label>
+                        <input type="number" name="weight" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Systolic BP</label>
+                        <input type="number" name="ap_hi" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Diastolic BP</label>
+                        <input type="number" name="ap_lo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Cholesterol</label>
+                        <select name="cholesterol">
+                            <option value="1">Normal</option>
+                            <option value="2">Above Normal</option>
+                            <option value="3">Well Above Normal</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Glucose</label>
+                        <select name="gluc">
+                            <option value="1">Normal</option>
+                            <option value="2">Above Normal</option>
+                            <option value="3">Well Above Normal</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Smoking</label>
+                        <select name="smoke">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Alcohol</label>
+                        <select name="alco">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box full">
+
+                        <label>Physical Activity</label>
+
+                        <select name="active">
+                            <option value="1">Active</option>
+                            <option value="0">Not Active</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                    Predict Disease
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+
+            © 2026 CardioCare | Machine Learning Project
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
